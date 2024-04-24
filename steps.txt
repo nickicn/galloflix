@@ -1,0 +1,19 @@
+git config --global user.name nickicn
+git config --global user.email nicolelopes0008@gmail.com
+
+EXECUTAR NO TERMINAL, UM POR VEZ, EM ORDEM:
+    dotnet new mvc -o GalloFlix
+    dotnet new sln --name GalloFlix
+    dotnet sln add GalloFlix\GalloFlix.csproj
+
+- Database First / Code First
+- Instalar os pacotes necessários
+
+USAR A EXTENÇÃO NUGET GALLERY
+    - Shift + Ctrl + P
+    - Nuget [Enter]
+    - Pesquisar e instalar os pacotes:
+     - EntityFrameworkCore
+     - EntityFrameworkCore.Design
+     - EntityFrameworkCore.Tools
+     - Pomelo.EntityFrameworkCore.MySql
