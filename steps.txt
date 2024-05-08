@@ -13,7 +13,7 @@ USAR A EXTENÇÃO NUGET GALLERY
     - Shift + Ctrl + P
     - Nuget [Enter]
     - Pesquisar e instalar os pacotes:
-     - EntityFrameworkCore
-     - EntityFrameworkCore.Design
-     - EntityFrameworkCore.Tools
-     - Pomelo.EntityFrameworkCore.MySql
+        - EntityFrameworkCore
+        - EntityFrameworkCore.Design
+        - EntityFrameworkCore.Tools
+        - Pomelo.EntityFrameworkCore.MySql
