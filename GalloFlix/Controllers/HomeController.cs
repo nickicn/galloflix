@@ -1,21 +1,29 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using GalloFlix.Models;
+using GalloFlix.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace GalloFlix.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly AppDbContext _context;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, AppDbContext context)
     {
         _logger = logger;
+        _context = context;
     }
 
     public IActionResult Index()
     {
-        return View();
+        var movies = _context.Movies
+            .Include(m => m.Genres)
+            .ThenInclude(mv => mv.Genre)
+            .ToList();
+        return View(movies);
     }
 
     public IActionResult Privacy()
